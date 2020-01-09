@@ -41,6 +41,7 @@ namespace Trainer
             else if (e.KeyCode == Keys.NumPad1)
             {
                 Vehicle vehicle = World.CreateVehicle(VehicleHash.Apc, Game.Player.Character.Position + Game.Player.Character.ForwardVector * 3.0f, Game.Player.Character.Heading + 90);
+                vehicle.PlaceOnGround();
             }
 
         }
