@@ -29,17 +29,24 @@ namespace Trainer
 
         private void onTick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         private void onKeyUp(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.KeyCode == Keys.NumPad0)
+            {
+                Vehicle vehicle = World.CreateVehicle(VehicleHash.Rhino, Game.Player.Character.Position + Game.Player.Character.ForwardVector * 3.0f, Game.Player.Character.Heading + 90);
+                vehicle.PlaceOnGround();
+            }
+            else if (e.KeyCode == Keys.NumPad1)
+            {
+                Vehicle vehicle = World.CreateVehicle(VehicleHash.Apc, Game.Player.Character.Position + Game.Player.Character.ForwardVector * 3.0f, Game.Player.Character.Heading + 90);
+            }
+
         }
 
         private void onKeyDown(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
         }
     }
 }
